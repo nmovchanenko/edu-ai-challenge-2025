@@ -1,0 +1,17 @@
+Analyze the following project requirements for a new application and recommend the most suitable type of database. Use Chain-of-Thought (CoT) reasoning to justify your selection. Your reasoning should be presented step-by-step, clearly demonstrating how each requirement influences the decision-making process.
+
+Project Requirements:
+
+Application Type: Social platform.
+User Base: Millions of users.
+Data to Store: User profiles, posts, and complex connections/relationships between users (e.g., friendships, followers).
+Performance Needs: High data read speed is crucial.
+Operational Load: Expected 80% read operations and 20% write operations (read-heavy).
+Future Growth: High scalability is important as the user base is expected to grow significantly.
+Instructions for AI:
+
+Requirement Analysis: Go through each project requirement one by one. For each requirement, explain its implications for database selection.
+Database Type Consideration: Based on the implications identified, discuss which database characteristics are favored or disfavored by each requirement.
+Connecting Requirements to Database Types: Explicitly link how combinations of these requirements point towards certain general types of databases (e.g., relational, NoSQL, and if NoSQL, which sub-types like document, graph, key-value, column-family).
+Justification and Selection: Conclude by selecting the most suitable type of database (e.g., "Graph Database," "Document Database," "Relational Database," etc., or a hybrid approach if necessary). Provide a clear, consolidated justification that summarizes how the chosen type best addresses the overall set of requirements, particularly highlighting the most critical ones.
+Ensure your entire response follows a clear, logical, step-by-step reasoning process.
