@@ -1,0 +1,19 @@
+PASS ./enigma.test.js
+  Enigma Machine
+    ✓ Encrypts and decrypts a message with default settings (no plugboard, all rotors at A, ring 0) (2 ms)
+    ✓ Plugboard swaps letters (1 ms)
+    ✓ Non-alphabetic characters are passed through unchanged
+    ✓ Rotor stepping changes output for repeated letters
+    ✓ Known Enigma I test vector (with plugboard, rotors, ring settings)
+
+-----------|---------|----------|---------|---------|-------------------
+File       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------|---------|----------|---------|---------|-------------------
+All files  |   73.33 |    56.25 |   68.42 |   73.58 |                   
+ enigma.js |   73.33 |    56.25 |   68.42 |   73.58 | 91-115,123        
+-----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.283 s
+Ran all test suites.

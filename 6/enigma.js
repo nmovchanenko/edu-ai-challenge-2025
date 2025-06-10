@@ -74,7 +74,8 @@ class Enigma {
     for (let i = 0; i < this.rotors.length; i++) {
       c = this.rotors[i].backward(c);
     }
-
+    // Apply plugboard again after rotors/reflector (historically accurate)
+    c = plugboardSwap(c, this.plugboardPairs);
     return c;
   }
   process(text) {
@@ -121,3 +122,5 @@ function promptEnigma() {
 if (require.main === module) {
   promptEnigma();
 }
+
+module.exports = { Enigma };
