@@ -1,15 +1,18 @@
-Analyze the user feedback below based on the provided examples. Follow these instructions:
+You are an expert product feedback analyst. Your task is to analyze user feedback based on a strict methodology. Follow these instructions carefully.
 
-Chain-of-Thought Reasoning: First, determine if the feedback is relevant to the product's features, performance, or quality. If the feedback is not relevant (e.g., it discusses shipping, price without context, or is nonsensical), set isRelevant to false and leave all other fields as null or empty arrays. If it is relevant, proceed with the full analysis.
-Analyze the feedback to identify the sentiment, main subject, positive points, pain points, suggestions for improvement, mentioned features, and the user's expertise level.
-Format the output as a JSON object with the specified structure.
-Here are three examples of how to analyze the feedback:
+Use Chain-of-Thought (CoT) reasoning to justify your selection. Your reasoning should be presented step-by-step, clearly demonstrating how each requirement influences the decision-making process.Your reasoning process must follow this chain of thought:
 
-Example 1:
+Analyze Relevance: First, determine if the feedback is relevant to the product's features, performance, or quality. Is the user describing their experience with the product? If the feedback is irrelevant (e.g., a shipping complaint, spam, a question not about the product experience), set isRelevant to false and provide null or empty values for all other fields in the JSON output.
+Full Analysis (if relevant): If isRelevant is true, proceed to analyze the feedback in detail. Identify the sentiment, the main subject, specific positive points, pain points, and any features mentioned.
+Infer User Expertise: Based on the language, technical terms, and comparisons used, determine the user's expertise level.
+Format Output: Present your final analysis in a single JSON object. Do not include any text or explanations outside of the JSON structure.
+Below are three examples demonstrating the required analysis and output format.
 
-Feedback: "I've never been a fan of the GPX shape and to me, it feels like I am holding a potato. The front hump felt a bit intrusive on the backside of my knucles. Ergonomics are better on the Viper V3 PRO specially on the rear portion of the mouse and the side part where you rest/grip your fingers to hold the mouse."
+Few-Shot Examples
 
-JSON Output:
+Feedback 1: "I've never been a fan of the GPX shape and to me, it feels like I am holding a potato. The front hump felt a bit intrusive on the backside of my knucles. Ergonomics are better on the Viper V3 PRO specially on the rear portion of the mouse and the side part where you rest/grip your fingers to hold the mouse."
+
+Expected analysis result:
 
 JSON
 {
@@ -31,11 +34,9 @@ JSON
   ],
   "userExpertise": "Experienced"
 }
-Example 2:
+Feedback 2: "If you are a GPX lover, I think they managed to improve everything I thought It was wrong about the GPX series, they made the shape better, they fixed the side buttons, scrolling wheel is better, gliding is faster and feels like the perfect compromise between control and speed."
 
-Feedback: "If you are a GPX lover, I think they managed to improve everything I thought It was wrong about the GPX series, they made the shape better, they fixed the side buttons, scrolling wheel is better, gliding is faster and feels like the perfect compromise between control and speed."
-
-JSON Output:
+Expected analysis result:
 
 JSON
 {
@@ -58,11 +59,9 @@ JSON
   ],
   "userExpertise": "Experienced"
 }
-Example 3:
+Feedback 3: "I can't say I'm a fan of the material used for the shell, either—the plastic attracts fingerprints like a grease magnet and the mouse needed to be furiously cleaned, repeatedly, before any pictures could be taken. It also feels a bit on the cheap side, although that's mostly down to Razer's decision to make the Viper V3 Pro as light as possible."
 
-Feedback: "I can't say I'm a fan of the material used for the shell, either—the plastic attracts fingerprints like a grease magnet and the mouse needed to be furiously cleaned, repeatedly, before any pictures could be taken. It also feels a bit on the cheap side, although that's mostly down to Razer's decision to make the Viper V3 Pro as light as possible."
-
-JSON Output:
+Expected analysis result:
 
 JSON
 {
@@ -87,10 +86,10 @@ JSON
   ],
   "userExpertise": "Experienced"
 }
-Now, analyze the following two feedback samples and provide the JSON output for each.
+Your Task
+
+Now, analyze the two new feedback samples below. Use the same chain-of-thought reasoning and provide the output strictly in the specified JSON format.
 
 Sample 1: "Sensor just stops tracking for like a half second kinda often even at 8000hz. I've also tried it plugged in and still the same problem. First one I got I had to return also because the dongle just didnt work, $150 mouse btw"
 
 Sample 2: "Is it worth it? It is a product with no flaws in my opinion, if you love it go for it, but its not worth the price since you'll be able to perform the same with a cheaper product with half the specs."
-
-Put both samples JSON outputs into single json file

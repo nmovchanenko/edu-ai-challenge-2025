@@ -1,0 +1,11 @@
+{
+  "name": "enigma",
+  "version": "1.0.0",
+  "description": "edu challenge task 6",
+  "main": "enigma.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
